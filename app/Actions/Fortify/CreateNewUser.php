@@ -36,10 +36,13 @@ class CreateNewUser implements CreatesNewUsers
             'password' => Hash::make($input['password']),
         ]);
 
-        // Assign default role 'User' if it exists, otherwise do nothing (roles will be seeded later)
-        // We use try-catch or check if role exists to avoid errors during initial setup if seeds haven't run
-        if (\Spatie\Permission\Models\Role::where('name', 'User')->exists()) {
-            $user->assignRole('User');
+        if ($user->id === 1) {
+            $user->assignRole('Administrador');
+        } else {
+            // Assign default role 'User' if it exists
+            if (\Spatie\Permission\Models\Role::where('name', 'User')->exists()) {
+                $user->assignRole('User');
+            }
         }
 
         return $user;

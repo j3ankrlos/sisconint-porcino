@@ -34,7 +34,7 @@
                 to { opacity: 1; }
             }
             .gradient-bg {
-                background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+                background: linear-gradient(-45deg, #ffffff, #ffe4e6, #fca5a5, #ef4444);
                 background-size: 400% 400%;
                 animation: gradient-shift 15s ease infinite;
             }
@@ -75,7 +75,7 @@
             }
         </style>
     </head>
-    <body class="antialiased font-sans gradient-bg text-gray-900 selection:bg-purple-200 selection:text-purple-900 overflow-hidden h-screen w-screen relative">
+    <body class="antialiased font-sans gradient-bg text-gray-900 selection:bg-purple-200 selection:text-purple-900 min-h-screen overflow-x-hidden w-full relative">
         
         <!-- Floating Particles Background -->
         <div class="absolute inset-0 overflow-hidden pointer-events-none">
@@ -88,10 +88,10 @@
             <div class="particle w-1.5 h-1.5 bg-white/35 top-[70%] right-[15%] animate-float" style="animation-delay: 2.5s;"></div>
         </div>
 
-        <main class="h-full w-full flex flex-col lg:flex-row relative z-10">
+        <main class="min-h-screen w-full flex flex-col lg:flex-row relative z-10">
             
             <!-- LEFT SIDE: LOGO & BRANDING -->
-            <div class="w-full lg:w-1/2 h-1/2 lg:h-full flex items-center justify-center p-8 lg:p-16 relative overflow-hidden">
+            <div class="w-full lg:w-1/2 h-auto min-h-[50vh] lg:h-full flex items-center justify-center p-8 lg:p-16 relative overflow-hidden">
                 <!-- Decorative gradient orbs -->
                 <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
                 <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-400/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
@@ -112,16 +112,16 @@
                         </h2>
                         <div class="flex items-center gap-4 justify-center">
                             <div class="h-0.5 w-16 bg-gradient-to-r from-transparent via-purple-600 to-transparent shadow-lg"></div>
-                            <p class="text-base font-black text-white tracking-[0.5em] uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]" style="text-shadow: 0 2px 20px rgba(0,0,0,0.3), 0 0 10px rgba(255,255,255,0.5);">PORCINO</p>
+                            <p class="text-base font-black text-gray-800 tracking-[0.5em] uppercase drop-shadow-[0_2px_10px_rgba(255,255,255,0.5)]" style="text-shadow: 0 2px 20px rgba(255,255,255,0.3), 0 0 10px rgba(255,255,255,0.5);">PORCINO</p>
                             <div class="h-0.5 w-16 bg-gradient-to-r from-transparent via-purple-600 to-transparent shadow-lg"></div>
                         </div>
-                        <p class="text-sm text-white font-bold tracking-wider mt-4 drop-shadow-lg" style="text-shadow: 0 2px 15px rgba(0,0,0,0.4);">Sistema de Gestión Integral</p>
+                        <p class="text-sm text-gray-700 font-bold tracking-wider mt-4 drop-shadow-lg" style="text-shadow: 0 2px 15px rgba(255,255,255,0.4);">Sistema de Gestión Integral</p>
                     </div>
                 </div>
             </div>
 
             <!-- RIGHT SIDE: CONTENT & ACTIONS -->
-            <div class="w-full lg:w-1/2 h-1/2 lg:h-full relative flex items-center justify-center p-8 lg:p-16">
+            <div class="w-full lg:w-1/2 h-auto min-h-[50vh] lg:h-full relative flex items-center justify-center p-8 lg:p-16">
                 
                 <div class="relative z-10 max-w-2xl w-full space-y-12 animate-slide-in-right">
                     
@@ -139,12 +139,12 @@
                         <!-- Main Heading -->
                         <div class="space-y-6">
                             <h1 class="text-6xl md:text-7xl lg:text-8xl font-black leading-[0.9] tracking-tighter">
-                                <span class="block text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]" style="text-shadow: 0 4px 30px rgba(0,0,0,0.4), 0 0 20px rgba(255,255,255,0.3);">Gestión</span>
-                                <span class="block bg-gradient-to-r from-emerald-400 via-emerald-300 to-emerald-400 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(16,185,129,0.6)]" style="text-shadow: 0 0 40px rgba(16,185,129,0.5);">Inteligente</span>
-                                <span class="block text-white drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]" style="text-shadow: 0 4px 30px rgba(0,0,0,0.4), 0 0 20px rgba(255,255,255,0.3);">Porcina</span>
+                                <span class="block text-gray-900 drop-shadow-[0_4px_20px_rgba(255,255,255,0.5)]" style="text-shadow: 0 4px 30px rgba(255,255,255,0.4), 0 0 20px rgba(255,255,255,0.3);">Gestión</span>
+                                <span class="block bg-gradient-to-r from-red-500 via-red-400 to-red-500 bg-clip-text text-transparent drop-shadow-[0_4px_20px_rgba(239,68,68,0.3)]" style="text-shadow: 0 0 40px rgba(239,68,68,0.3);">Inteligente</span>
+                                <span class="block text-gray-900 drop-shadow-[0_4px_20px_rgba(255,255,255,0.5)]" style="text-shadow: 0 4px 30px rgba(255,255,255,0.4), 0 0 20px rgba(255,255,255,0.3);">Porcina</span>
                             </h1>
                             
-                            <p class="text-xl md:text-2xl text-white font-bold leading-relaxed max-w-xl drop-shadow-[0_2px_15px_rgba(0,0,0,0.5)]" style="text-shadow: 0 2px 20px rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.2);">
+                            <p class="text-xl md:text-2xl text-gray-800 font-bold leading-relaxed max-w-xl drop-shadow-[0_2px_15px_rgba(255,255,255,0.5)]" style="text-shadow: 0 2px 20px rgba(255,255,255,0.4), 0 0 15px rgba(255,255,255,0.2);">
                                 Tecnología de vanguardia para optimizar cada aspecto de tu producción porcina.
                             </p>
                         </div>
@@ -213,7 +213,7 @@
         <!-- Footer -->
         <div class="absolute bottom-8 left-0 right-0 z-50 pointer-events-none">
             <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
-                <p class="text-xs font-bold text-white/80 uppercase tracking-[0.3em] drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(0,0,0,0.5);">© {{ date('Y') }} SISCONINT</p>
+                <p class="text-xs font-bold text-gray-700/80 uppercase tracking-[0.3em] drop-shadow-lg" style="text-shadow: 0 2px 10px rgba(255,255,255,0.5);">© {{ date('Y') }} SISCONINT</p>
                 <div class="hidden md:flex gap-8">
                     <span class="text-[10px] font-black text-white/60 uppercase tracking-[0.4em] drop-shadow-md" style="text-shadow: 0 2px 8px rgba(0,0,0,0.4);">Innovación</span>
                     <span class="text-[10px] font-black text-white/60 uppercase tracking-[0.4em] drop-shadow-md" style="text-shadow: 0 2px 8px rgba(0,0,0,0.4);">Tecnología</span>

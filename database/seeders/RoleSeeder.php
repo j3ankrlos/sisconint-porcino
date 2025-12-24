@@ -23,15 +23,10 @@ class RoleSeeder extends Seeder
         Permission::firstOrCreate(['name' => 'manage_roles']);
 
         // Create Roles and Assign Permissions
-        $adminRole = Role::firstOrCreate(['name' => 'Admin']);
+        $adminRole = Role::firstOrCreate(['name' => 'Administrador']);
         $adminRole->givePermissionTo(Permission::all());
 
         $userRole = Role::firstOrCreate(['name' => 'User']);
         $userRole->givePermissionTo(['view_dashboard']);
-        
-        $user = \App\Models\User::find(1);
-        if ($user) {
-            $user->assignRole('Admin');
-        }
     }
 }

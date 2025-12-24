@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     
-                    @role('Admin') 
+                    @role('Administrador') 
                     <!-- O usar can('manage_users') si prefieres ser estricto con permisos -->
                         <x-nav-link href="{{ route('admin.users') }}" :active="request()->routeIs('admin.users')">
                             {{ __('Users') }}
@@ -154,7 +154,7 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
 
-            @role('Admin')
+            @role('Administrador')
                 <x-responsive-nav-link href="{{ route('admin.users') }}" :active="request()->routeIs('admin.users')">
                     {{ __('Users') }}
                 </x-responsive-nav-link>

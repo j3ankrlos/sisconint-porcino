@@ -17,9 +17,9 @@ Route::middleware([
 
     Route::get('/admin/users', \App\Livewire\Admin\UserManagement::class)
         ->name('admin.users')
-        ->middleware(['role:Admin']);
+        ->middleware(['role:Administrador']);
 
     Route::get('/admin/roles', \App\Livewire\Admin\RoleManagement::class)
         ->name('admin.roles')
-        ->middleware(['role:Admin']);
+        ->middleware(['role:Administrador']);
 });
