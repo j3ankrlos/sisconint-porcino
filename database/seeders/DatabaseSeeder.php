@@ -19,6 +19,13 @@ class DatabaseSeeder extends Seeder
 
         $this->call([
             RoleSeeder::class,
+            GranjaSeeder::class,
+            NaveSeeder::class,
+            SeccionSeeder::class,
+            RazaSeeder::class,
+            TipoVentaSeeder::class,
+            CausaVentaSeeder::class,
+            CausaMuerteSeeder::class,
         ]);
 
         // User::factory()->create([
